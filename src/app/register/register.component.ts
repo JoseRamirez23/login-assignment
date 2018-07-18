@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangeService } from '../change.service';
 
 @Component({
   selector: 'register',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private changeService : ChangeService) { }
 
   ngOnInit() {
+  }
+
+  cancel(){
+    this.changeService.next =true;
   }
 
 }

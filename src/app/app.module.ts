@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule} from '@angular/router';
+import { ChangeService } from './change.service';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,12 @@ import { Routes, RouterModule} from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        component: LoginComponent
-      },
+      //this right here is to display right away
+      // {
+      //   path: '',
+      //   component: LoginComponent
+      // },
+      
       {
         path: 'login',
         component: LoginComponent
@@ -32,10 +35,14 @@ import { Routes, RouterModule} from '@angular/router';
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path:'app',
+        component: AppComponent
       }
     ])
   ],
-  providers: [],
+  providers: [ChangeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
