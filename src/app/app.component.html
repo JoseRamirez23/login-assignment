@@ -1,7 +1,7 @@
+
 <router-outlet></router-outlet>
 
-<div *ngIf="changeService.next == true">
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" *ngIf="changeService.next == true">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Refresh</a>
@@ -12,12 +12,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a routerLink="/register" (click)="changeLogin()"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a routerLink="/login" (click)="changeLogin()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a routerLink="/login" (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </nav>
+
+      
         
-      <div class="container">
-        
-      </div>
-    </div>
+      
+   

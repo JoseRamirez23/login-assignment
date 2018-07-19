@@ -1,23 +1,23 @@
 
   
 
-  <form action="/action_page.php">
+  
     <div class="container">
       <h1>Login</h1>
       
       <hr>
   
   
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="email" class="col-xs-12"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required [(ngModel)]="confirm.email">
   
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"  class="col-xs-12"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="confirm.password">
   
     
   
       <div class="row">
-      <button type="submit" class="col-xs-6 btn btn-success" routerLink="/dashboard">Login</button>
+      <button type="submit" class="col-xs-6 btn btn-success" (click)="enter()">Login</button>
       <button type="button" class="col-xs-6 btn btn-danger" (click)="cancel()" routerLink="/app">Cancel</button>
     </div>
 

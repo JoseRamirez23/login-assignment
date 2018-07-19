@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule} from '@angular/router';
 import { ChangeService } from './change.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ChangeService } from './change.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       //this right here is to display right away
       // {
